@@ -1,0 +1,17 @@
+plugins {
+    id 'version-catalog'
+    id 'maven-publish'
+}
+
+group = 'com.driff'
+version = '1.0.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+catalog {
+    versionCatalog{
+        it.from(files("libs.versions.toml"))
+    }
+}

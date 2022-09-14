@@ -1,0 +1,4 @@
+
+rootProject.name = 'CatalogTemplate'
+
+include("catalog-androidx")
