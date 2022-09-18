@@ -9,8 +9,10 @@
 
 name: Publish package to GitHub Packages
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - 'main'
+      - 'releases/**'
 jobs:
   publish:
     runs-on: ubuntu-latest 
@@ -25,11 +27,12 @@ jobs:
           distribution: 'adopt'
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
+      - name: Build Catalog
+        uses: gradle/wrapper-build-action@v2
+      - run: gradle generateCatalogAsToml
       - name: Publish package
         uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
         with:
-          arguments: |
-            generateCatalogAsToml
-            publish
+          arguments:  publish
         env:
           GITHUB_TOKEN: ${{ secrets.CATALOG_TOKEN }}
