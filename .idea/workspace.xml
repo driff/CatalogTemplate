@@ -102,7 +102,7 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.CatalogTemplate [generateCatalogAsToml]">
+  <component name="RunManager" selected="Gradle.CatalogTemplate [publishMavenPublicationToMavenLocal]">
     <configuration name="CatalogTemplate [buildEnvironment]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -166,6 +166,27 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="CatalogTemplate [publishMavenPublicationToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publishMavenPublicationToMavenLocal" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="CatalogTemplate [wrapper]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -187,34 +208,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CatalogTemplate:catalog-androidx [components]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/catalog-androidx" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="components" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CatalogTemplate [publishMavenPublicationToMavenLocal]" />
         <item itemvalue="Gradle.CatalogTemplate [generateCatalogAsToml]" />
         <item itemvalue="Gradle.CatalogTemplate [buildEnvironment]" />
         <item itemvalue="Gradle.CatalogTemplate [wrapper]" />
         <item itemvalue="Gradle.CatalogTemplate [init]" />
-        <item itemvalue="Gradle.CatalogTemplate:catalog-androidx [components]" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +229,7 @@
       <workItem from="1662920093389" duration="780000" />
       <workItem from="1662920896399" duration="5216000" />
       <workItem from="1663090956947" duration="33000" />
-      <workItem from="1663111626244" duration="19404000" />
+      <workItem from="1663111626244" duration="20486000" />
     </task>
     <task id="LOCAL-00001" summary="added publish steps, modified build.gradle to include libraries">
       <created>1663465207724</created>
