@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.driff'
-version = '1.0.2'
+version = '1.0.3'
 
 repositories {
     mavenCentral()
@@ -23,13 +23,13 @@ catalog {
         version("kotlin_version", "1.7.10")
         version("coroutines_version", "1.6.4")
         version("arrow_version", "1.1.2")
-        version("compose_version", "1.3.0")
+        version("compose_compiler_version", "1.3.0")
         version("lifecycle_version", "2.5.1")
         version("activity_compose_version", "1.5.1")
         version("junit_version", "4.13.2")
         version("junit_ext_version", "1.1.3")
         version("espresso_core_version", "3.4.0")
-        version("kotlin", "1.6.21")
+        version("kotlin", "1.7.10")
         version("agp_version", "7.2.0")
 
         plugin("kotlin-lang", "org.jetbrains.kotlin.jvm").versionRef("kotlin")
