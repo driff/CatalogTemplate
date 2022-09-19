@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.driff'
-version = '1.0.0-aplha'
+version = '1.0.0'
 
 repositories {
     mavenCentral()
