@@ -14,7 +14,7 @@ catalog {
     versionCatalog{
         version("multidex_version", "2.0.1")
         version("android_core_version", "1.8.0")
-        version("compose_version", "1.3.0")
+        version("compose_version", "1.2.1")
         version("ktor_version", "2.1.0")
         version("dagger_version", "2.43.2")
         version("multidex_version", "2.0.1")
@@ -25,16 +25,16 @@ catalog {
         version("arrow_version", "1.1.2")
         version("compose_version", "1.3.0")
         version("lifecycle_version", "2.5.1")
-        version("activity_compose_version", "2.5.1")
+        version("activity_compose_version", "1.5.1")
         version("junit_version", "4.13.2")
         version("junit_ext_version", "1.1.3")
         version("espresso_core_version", "3.4.0")
         version("kotlin", "1.6.21")
-        version("jvm", "17")
 
         plugin("kotlin-lang", "org.jetbrains.kotlin.jvm").versionRef("kotlin")
         plugin("kotlin-kapt", "org.jetbrains.kotlin.kapt").versionRef("kotlin")
         plugin("kotlin-allopen", "org.jetbrains.kotlin.plugin.allopen").versionRef("kotlin")
+        plugin("hilt-android", "com.google.dagger.hilt.android").versionRef("dagger_version")
 
         library("kotlin-reflect", "org.jetbrains.kotlin", "kotlin-reflect")
                 .versionRef("kotlin")
@@ -48,8 +48,11 @@ catalog {
         library("compose-ui", "androidx.compose.ui", "ui").versionRef("compose_version")
         library("compose-material", "androidx.compose.material", "material").versionRef("compose_version")
         library("compose-ui-preview", "androidx.compose.ui", "ui-tooling-preview").versionRef("compose_version")
+        library("compose-livedata", "androidx.compose.runtime", "androidx.compose.runtime").versionRef("compose_version")
         library("android-lifecycle", "androidx.lifecycle", "lifecycle-runtime-ktx").versionRef("lifecycle_version")
         library("android-compose-activity", "androidx.activity", "activity-compose").versionRef("activity_compose_version")
+        library("compose-fundation", "androidx.compose.foundation", "foundation").versionRef("compose_version")
+        library("android-lifecycle-compose", "androidx.lifecycle", "lifecycle-viewmodel-compose").versionRef("lifecycle_version")
         library("ktor-core", "io.ktor", "ktor-client-core").versionRef("ktor_version")
         library("ktor-okhttp", "io.ktor", "ktor-client-okhttp").versionRef("ktor_version")
         library("ktor-android", "io.ktor", "ktor-client-android").versionRef("ktor_version")
@@ -73,7 +76,8 @@ catalog {
         library("di-hilt-android", "com.google.dagger", "hilt-android").versionRef("dagger_version")
         library("di-hilt-compiler",  "com.google.dagger", "hilt-compiler").versionRef("dagger_version")
 
-        bundle("android-hilt", ["di-hilt-android", "di-hilt-compiler"])
+        bundle("android-hilt", ["di-hilt-android"])
+        bundle("android-kapt-all", ["di-hilt-compiler"])
         bundle("ktor-android", [
                 "ktor-core",
                 "ktor-okhttp",
@@ -89,8 +93,11 @@ catalog {
                 "androidx-core",
                 "compose-ui",
                 "compose-material",
+                "compose-fundation",
                 "compose-ui-preview",
+                "compose-livedata",
                 "android-lifecycle",
+                "android-lifecycle-compose",
                 "android-compose-activity"
         ])
 
