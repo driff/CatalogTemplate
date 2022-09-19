@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.driff'
-version = '1.0.0'
+version = '1.0.1'
 
 repositories {
     mavenCentral()
@@ -48,7 +48,7 @@ catalog {
         library("compose-ui", "androidx.compose.ui", "ui").versionRef("compose_version")
         library("compose-material", "androidx.compose.material", "material").versionRef("compose_version")
         library("compose-ui-preview", "androidx.compose.ui", "ui-tooling-preview").versionRef("compose_version")
-        library("compose-livedata", "androidx.compose.runtime", "androidx.compose.runtime").versionRef("compose_version")
+        library("compose-livedata", "androidx.compose.runtime", "runtime").versionRef("compose_version")
         library("android-lifecycle", "androidx.lifecycle", "lifecycle-runtime-ktx").versionRef("lifecycle_version")
         library("android-compose-activity", "androidx.activity", "activity-compose").versionRef("activity_compose_version")
         library("compose-fundation", "androidx.compose.foundation", "foundation").versionRef("compose_version")
