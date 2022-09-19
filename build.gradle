@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.driff'
-version = '1.0.1'
+version = '1.0.2'
 
 repositories {
     mavenCentral()
@@ -30,8 +30,12 @@ catalog {
         version("junit_ext_version", "1.1.3")
         version("espresso_core_version", "3.4.0")
         version("kotlin", "1.6.21")
+        version("agp_version", "7.2.0")
 
         plugin("kotlin-lang", "org.jetbrains.kotlin.jvm").versionRef("kotlin")
+        plugin("kotlin-android", "org.jetbrains.kotlin.android").versionRef("kotlin")
+        plugin("android-app", "com.android.application").versionRef("agp_version")
+        plugin("android-lib", "com.android.library").versionRef("agp_version")
         plugin("kotlin-kapt", "org.jetbrains.kotlin.kapt").versionRef("kotlin")
         plugin("kotlin-allopen", "org.jetbrains.kotlin.plugin.allopen").versionRef("kotlin")
         plugin("hilt-android", "com.google.dagger.hilt.android").versionRef("dagger_version")
