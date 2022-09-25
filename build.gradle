@@ -132,7 +132,7 @@ catalog {
                 "tests-mockk",
                 "tests-mockk-jvm"
         ])
-        bundle("android-testing-debug", [
+        bundle("android-testing-extra", [
                 "tests-ui-tooling",
                 "tests-ui-manifest",
         ])
