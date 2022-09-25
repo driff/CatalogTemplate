@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.driff'
-version = '1.0.3'
+version = '1.0.4'
 
 repositories {
     mavenCentral()
@@ -17,6 +17,7 @@ catalog {
         version("compose_version", "1.2.1")
         version("ktor_version", "2.1.0")
         version("dagger_version", "2.43.2")
+        version("turbine_version", "0.11.0")
         version("multidex_version", "2.0.1")
         version("mockk_version", "1.12.7")
         version("androidXTestVersion", "1.4.0")
@@ -25,7 +26,7 @@ catalog {
         version("arch_core_version", "2.1.0")
         version("arrow_version", "1.1.2")
         version("compose_compiler_version", "1.3.0")
-        version("lifecycle_version", "2.5.1")
+        version("lifecycle_version", "2.5.2")
         version("activity_compose_version", "1.5.1")
         version("junit_version", "4.13.2")
         version("junit_ext_version", "1.1.3")
@@ -48,6 +49,7 @@ catalog {
                 .versionRef("kotlin")
         library("kotlinlogging", "io.github.microutils:kotlin-logging-jvm:2.1.23")
         library("logback", "ch.qos.logback:logback-classic:1.2.11")
+        library("cashapp-turbine", "app.cash.turbine", ":turbine").versionRef("turbine_version")
 
         library("android-multidex", "androidx.multidex", "multidex").versionRef("multidex_version")
         library("androidx-core", "androidx.core", "core-ktx").versionRef("android_core_version")
@@ -62,6 +64,7 @@ catalog {
         library("android-compose-activity", "androidx.activity", "activity-compose").versionRef("activity_compose_version")
         library("compose-fundation", "androidx.compose.foundation", "foundation").versionRef("compose_version")
         library("android-lifecycle-compose", "androidx.lifecycle", "lifecycle-viewmodel-compose").versionRef("lifecycle_version")
+        library("android-lifecycle-livedata", "androidx.lifecycle", "lifecycle-livedata-ktx").versionRef("lifecycle_version")
         library("ktor-core", "io.ktor", "ktor-client-core").versionRef("ktor_version")
         library("ktor-okhttp", "io.ktor", "ktor-client-okhttp").versionRef("ktor_version")
         library("ktor-android", "io.ktor", "ktor-client-android").versionRef("ktor_version")
@@ -110,6 +113,7 @@ catalog {
                 "compose-fundation",
                 "compose-ui-preview",
                 "compose-livedata",
+                "android-lifecycle-livedata",
                 "android-lifecycle",
                 "android-lifecycle-compose",
                 "android-compose-activity",
@@ -124,6 +128,7 @@ catalog {
                 "tests-ktor-client",
                 "tests-ext-junit",
                 "tests-ext-junitktx",
+                "cashapp-turbine",
                 "tests-spresso-core",
                 "androidx-arch-core-testing",
                 "tests-ui-junit4",
