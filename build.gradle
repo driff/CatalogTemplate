@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.driff'
-version = '1.0.4'
+version = '1.0.5'
 
 repositories {
     mavenCentral()
@@ -26,7 +26,7 @@ catalog {
         version("arch_core_version", "2.1.0")
         version("arrow_version", "1.1.2")
         version("compose_compiler_version", "1.3.0")
-        version("lifecycle_version", "2.5.2")
+        version("lifecycle_version", "2.5.1")
         version("activity_compose_version", "1.5.1")
         version("junit_version", "4.13.2")
         version("junit_ext_version", "1.1.3")
@@ -49,7 +49,7 @@ catalog {
                 .versionRef("kotlin")
         library("kotlinlogging", "io.github.microutils:kotlin-logging-jvm:2.1.23")
         library("logback", "ch.qos.logback:logback-classic:1.2.11")
-        library("cashapp-turbine", "app.cash.turbine", ":turbine").versionRef("turbine_version")
+        library("cashapp-turbine", "app.cash.turbine", "turbine").versionRef("turbine_version")
 
         library("android-multidex", "androidx.multidex", "multidex").versionRef("multidex_version")
         library("androidx-core", "androidx.core", "core-ktx").versionRef("android_core_version")
@@ -61,10 +61,14 @@ catalog {
         library("compose-ui-preview", "androidx.compose.ui", "ui-tooling-preview").versionRef("compose_version")
         library("compose-livedata", "androidx.compose.runtime", "runtime").versionRef("compose_version")
         library("android-lifecycle", "androidx.lifecycle", "lifecycle-runtime-ktx").versionRef("lifecycle_version")
+        library("android-lifecycle-savedstate", "androidx.lifecycle", "lifecycle-viewmodel-savedstate").versionRef("lifecycle_version")
         library("android-compose-activity", "androidx.activity", "activity-compose").versionRef("activity_compose_version")
         library("compose-fundation", "androidx.compose.foundation", "foundation").versionRef("compose_version")
         library("android-lifecycle-compose", "androidx.lifecycle", "lifecycle-viewmodel-compose").versionRef("lifecycle_version")
         library("android-lifecycle-livedata", "androidx.lifecycle", "lifecycle-livedata-ktx").versionRef("lifecycle_version")
+        library("android-lifecycle-common", "androidx.lifecycle", "lifecycle-common-java8").versionRef("lifecycle_version")
+        library("android-lifecycle-viewmodel", "androidx.lifecycle", "lifecycle-viewmodel-ktx").versionRef("lifecycle_version")
+        library("android-lifecycle-testing", "androidx.lifecycle", "lifecycle-runtime-testing").versionRef("lifecycle_version")
         library("ktor-core", "io.ktor", "ktor-client-core").versionRef("ktor_version")
         library("ktor-okhttp", "io.ktor", "ktor-client-okhttp").versionRef("ktor_version")
         library("ktor-android", "io.ktor", "ktor-client-android").versionRef("ktor_version")
@@ -110,9 +114,12 @@ catalog {
                 "androidx-core",
                 "compose-ui",
                 "compose-material",
+                "android-lifecycle-savedstate",
                 "compose-fundation",
+                "android-lifecycle-common",
                 "compose-ui-preview",
                 "compose-livedata",
+                "android-lifecycle-viewmodel",
                 "android-lifecycle-livedata",
                 "android-lifecycle",
                 "android-lifecycle-compose",
@@ -128,6 +135,7 @@ catalog {
                 "tests-ktor-client",
                 "tests-ext-junit",
                 "tests-ext-junitktx",
+                "android-lifecycle-testing",
                 "cashapp-turbine",
                 "tests-spresso-core",
                 "androidx-arch-core-testing",
