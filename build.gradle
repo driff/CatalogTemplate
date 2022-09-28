@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.driff'
-version = '1.0.5'
+version = '1.0.6'
 
 repositories {
     mavenCentral()
@@ -89,9 +89,11 @@ catalog {
         library("tests-ext-junit", "androidx.test.ext", "junit").versionRef("junit_ext_version")
         library("tests-ext-junitktx", "androidx.test.ext", "junit-ktx").versionRef("junit_ext_version")
         library("tests-spresso-core", "androidx.test.espresso", "espresso-core").versionRef("espresso_core_version")
+        library("tests-spresso-contrib", "androidx.test.espresso", "espresso-contrib").versionRef("espresso_core_version")
         library("tests-ui-junit4", "androidx.compose.ui", "ui-test-junit4").versionRef("compose_version")
         library("tests-ui-tooling", "androidx.compose.ui", "ui-tooling").versionRef("compose_version")
         library("tests-ui-manifest", "androidx.compose.ui", "ui-test-manifest").versionRef("compose_version")
+        library("tests-ui", "androidx.compose.ui", "ui-test").versionRef("compose_version")
         library("tests-hilt-android", "com.google.dagger", "hilt-android-testing").versionRef("dagger_version")
         library("tests-mockk", "io.mockk", "mockk").versionRef("mockk_version")
         library("tests-mockk-jvm", "io.mockk", "mockk-agent-jvm").versionRef("mockk_version")
@@ -133,14 +135,15 @@ catalog {
                 "tests-core",
                 "tests-coroutines",
                 "tests-ktor-client",
+                "tests-ui",
                 "tests-ext-junit",
                 "tests-ext-junitktx",
                 "android-lifecycle-testing",
+                "tests-spresso-contrib",
                 "cashapp-turbine",
                 "tests-spresso-core",
                 "androidx-arch-core-testing",
                 "tests-ui-junit4",
-                "tests-robolectric",
                 "tests-hilt-android",
                 "tests-mockk",
                 "tests-mockk-jvm"
