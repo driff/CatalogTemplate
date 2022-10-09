@@ -34,6 +34,7 @@ catalog {
         version("kotlin", "1.7.10")
         version("robolectric_version", "4.8.2")
         version("agp_version", "7.2.0")
+        version("navigation_version", "2.5.2")
         version("material_version", "1.6.1")
         version("material3_version", "1.0.0-rc01")
 
@@ -104,7 +105,8 @@ catalog {
         library("android-material",  "com.google.android.material", "material").versionRef("material_version")
         library("android-material3",  "androidx.compose.material3", "material3").versionRef("material3_version")
         library("android-material3-windows",  "androidx.compose.material3", "material3-window-size-class").versionRef("material3_version")
-       
+        library("android-navigation",  "androidx.navigation", "navigation-compose").versionRef("navigation_version")
+
 
         bundle("android-hilt", ["di-hilt-android"])
         bundle("ktor-android", [
@@ -131,6 +133,7 @@ catalog {
                 "android-lifecycle-common",
                 "compose-ui-preview",
                 "compose-livedata",
+                "android-navigation",
                 "android-lifecycle-viewmodel",
                 "android-lifecycle-livedata",
                 "android-lifecycle",
