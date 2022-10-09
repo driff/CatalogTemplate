@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.driff'
-version = '1.0.6'
+version = '1.0.7'
 
 repositories {
     mavenCentral()
@@ -34,6 +34,8 @@ catalog {
         version("kotlin", "1.7.10")
         version("robolectric_version", "4.8.2")
         version("agp_version", "7.2.0")
+        version("material_version", "1.6.1")
+        version("material3_version", "1.0.0-rc01")
 
         plugin("kotlin-lang", "org.jetbrains.kotlin.jvm").versionRef("kotlin")
         plugin("kotlin-android", "org.jetbrains.kotlin.android").versionRef("kotlin")
@@ -99,6 +101,10 @@ catalog {
         library("tests-mockk-jvm", "io.mockk", "mockk-agent-jvm").versionRef("mockk_version")
         library("di-hilt-android", "com.google.dagger", "hilt-android").versionRef("dagger_version")
         library("di-hilt-compiler",  "com.google.dagger", "hilt-compiler").versionRef("dagger_version")
+        library("android-material",  "com.google.android.material", "material").versionRef("material_version")
+        library("android-material3",  "androidx.compose.material3", "material3").versionRef("material3_version")
+        library("android-material3-windows",  "androidx.compose.material3", "material3-window-size-class").versionRef("material3_version")
+       
 
         bundle("android-hilt", ["di-hilt-android"])
         bundle("ktor-android", [
@@ -110,7 +116,11 @@ catalog {
                 "ktor-serialization",
                 "ktor-client-res"
         ])
-
+        bundle ("android-material-design-compose", [
+            "android-material",
+            "android-material3",
+            "android-material3-windows",
+        ])
         bundle("android-base", [
                 "android-multidex",
                 "androidx-core",
