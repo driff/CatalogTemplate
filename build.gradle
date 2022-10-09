@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.driff'
-version = '1.0.7'
+version = '1.0.8'
 
 repositories {
     mavenCentral()
@@ -33,7 +33,7 @@ catalog {
         version("espresso_core_version", "3.4.0")
         version("kotlin", "1.7.10")
         version("robolectric_version", "4.8.2")
-        version("agp_version", "7.2.0")
+        version("agp_version", "7.3.0")
         version("navigation_version", "2.5.2")
         version("material_version", "1.6.1")
         version("material3_version", "1.0.0-rc01")
