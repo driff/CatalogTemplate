@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.driff'
-version = '1.1.1'
+version = '1.1.2'
 
 repositories {
     mavenCentral()
@@ -30,7 +30,7 @@ catalog {
         version("compose_constraint_version", "1.0.1")
         // Material
         version("material_version", "1.6.1")
-        version("compose_material_fundation_version", "1.3.1")
+        version("compose_material_version", "1.3.1")
         version("compose_material3_version", "1.0.1")
         // utils
         version("ktor_version", "2.2.2")
@@ -93,11 +93,11 @@ catalog {
         library("compose-runtime-livedata", "androidx.compose.runtime", "runtime-livedata").versionRef("compose_version")
         library("android-compose-activity", "androidx.activity", "activity-compose").versionRef("activity_compose_version")
         library("android-lifecycle-compose", "androidx.lifecycle", "lifecycle-viewmodel-compose").versionRef("lifecycle_version")
-        library("compose-fundation", "androidx.compose.foundation", "foundation").versionRef("compose_version")
+        library("compose-fundation", "androidx.compose.foundation", "foundation").versionRef("compose_fundation_version")
         library("compose-constraint-layout", "androidx.constraintlayout", "constraintlayout-compose").versionRef("compose_constraint_version")
 
         // Material
-        library("compose-material", "androidx.compose.material", "material").versionRef("compose_version")
+        library("compose-material", "androidx.compose.material", "material").versionRef("compose_material_version")
         library("android-material3",  "androidx.compose.material3", "material3").versionRef("compose_material3_version")
         library("android-material3-windows",  "androidx.compose.material3", "material3-window-size-class").versionRef("compose_material3_version")
 
