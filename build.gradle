@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.driff'
-version = '1.1.2'
+version = '1.1.3'
 
 repositories {
     mavenCentral()
@@ -106,7 +106,7 @@ catalog {
         library("android-lifecycle-testing", "androidx.lifecycle", "lifecycle-runtime-testing").versionRef("lifecycle_version")
         library("tests-ktor-client", "io.ktor", "ktor-client-mock").versionRef("ktor_version")
         library("tests-junit", "junit", "junit").versionRef("junit_version")
-        library("tests-junit-ktx", "androidx.test.ext", "junit-ktx").versionRef("junit_version")
+        library("tests-junit-ktx", "androidx.test.ext", "junit-ktx").versionRef("junit_ext_version")
         library("tests-runner", "androidx.test", "runner").versionRef("androidx_test_runner_version")
         library("tests-robolectric", "org.robolectric", "robolectric").versionRef("robolectric_version")
         library("tests-core", "androidx.test", "core").versionRef("androidx_test_core_version")
